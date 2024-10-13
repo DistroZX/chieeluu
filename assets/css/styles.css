@@ -1,0 +1,783 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Color Scheme */
+:root {
+    --primary-color: #f4a261;
+    /* Updated primary color */
+    --secondary-color: #4f5257;
+    /* Updated secondary color */
+    --accent-color: #acd023;
+    /* Updated accent color */
+    --light-color: #f2f2f2;
+    /* Updated light color */
+    --text-color: #333333;
+    /* Updated text color */
+    --bg-color: #ffffff;
+    /* Updated background color */
+    --white-color: #ffffff;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: var(--accent-color);
+    padding: 15px 20px;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('http://localhost/chieeluu/assets/images/cover.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.hero .overlay {
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 48px;
+    /* Retain your existing font size */
+    margin-bottom: 20px;
+    /* Spacing below the title */
+    color: #333;
+    /* Default text color */
+    text-align: center;
+    /* Center align the text */
+    text-shadow:
+        2px 2px 0 rgba(0, 0, 0, 0.2),
+        /* Light shadow */
+        4px 4px 0 rgba(0, 0, 0, 0.15),
+        /* Medium shadow */
+        6px 6px 0 rgba(0, 0, 0, 0.1);
+    /* Darker shadow for depth */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Optional: Use a modern sans-serif font */
+}
+
+.hero-title span {
+    color: var(--secondary-color);
+    /* Retain your secondary color */
+    text-shadow:
+        1px 1px 0 rgba(0, 0, 0, 0.2),
+        /* Light shadow for span */
+        2px 2px 0 rgba(0, 0, 0, 0.15),
+        /* Medium shadow for span */
+        3px 3px 0 rgba(0, 0, 0, 0.1);
+    /* Darker shadow for span */
+    font-weight: bold;
+    /* Optional: make it bold */
+}
+
+
+.cta-btn {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--accent-color);
+    position: relative;
+    animation: slideInUp 1s ease;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Summary Section */
+
+
+/* Skills Section */
+.skills-section {
+    padding: 40px;
+    background-color: #ffffff;
+    /* Clean white background for modern look */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    /* Wider max-width for architectural feel */
+    margin: 20px auto;
+    /* Center the section */
+    text-align: center;
+    /* Centering text for modern appeal */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    /* Large title */
+    color: var(--primary-color);
+    /* Primary color */
+    margin-bottom: 40px;
+    /* Space below the title */
+}
+
+
+
+.skill-card {
+    flex: 1 1 200px;
+    /* Allow skill cards to grow and shrink */
+    background-color: #f9f9f9;
+    /* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    /* Center text */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Transition for hover effects */
+    position: relative;
+}
+
+.skill-icon {
+    margin-bottom: 10px;
+    /* Space between icon and skill name */
+}
+
+/* Additional styling can remain unchanged */
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
+}
+
+.skill-description {
+    max-height: 0;
+    /* Initially hidden */
+    overflow: hidden;
+    /* Hide overflow for animation */
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    /* Smooth transition */
+    opacity: 0;
+    /* Start hidden */
+}
+
+.skill-card.active .skill-description {
+    opacity: 1;
+    /* Fade in effect */
+}
+
+
+
+/* Media Query for Responsive Design */
+@media (max-width: 600px) {
+    .skills-section {
+        padding: 20px;
+        /* Less padding on smaller screens */
+    }
+
+    .section-title {
+        font-size: 2rem;
+        /* Adjust title size for smaller screens */
+    }
+
+    .skill-name {
+        font-size: 1.2rem;
+        /* Smaller font size on smaller screens */
+    }
+}
+
+
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 60px 20px;
+    background-color: var(--white-color);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    color: var(--white-color);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.portfolio-overlay p {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .cta-btn {
+        font-size: 16px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-grid,
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--accent-color);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s ease, transform 0.3s;
+}
+
+#scrollToTop:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    #scrollToTop {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Other Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.85); /* Dark background with higher opacity */
+    backdrop-filter: blur(5px); /* Blur effect for the background */
+    transition: opacity 0.3s ease; /* Smooth transition for opening/closing */
+}
+
+.modal-content {
+    background-color: #ffffff; /* White background */
+    margin: 5% auto; /* Reduced top margin for a more centered look */
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: 90%; /* Slightly increased width for mobile responsiveness */
+    max-width: 700px; /* Max width for larger screens */
+    animation: fadeIn 0.5s; /* Fade-in animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.close {
+    color: #333; /* Dark gray */
+    float: right;
+    font-size: 30px; /* Slightly larger font size */
+    font-weight: bold;
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.close:hover,
+.close:focus {
+    color: #e74c3c; /* Accent color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Increased space between images */
+    justify-content: center; /* Center images */
+}
+
+.modal-image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+.modal-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Prevent body from scrolling when modal is open */
+body.modal-open {
+    overflow: hidden; /* Disable scrolling */
+}
+
+
+.contact-section {
+    max-width: 500px;
+    /* Set a maximum width for the contact section */
+    margin: 20px auto;
+    /* Center the section with margin */
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Slightly larger shadow for a modern look */
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Increase space between form elements */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    /* Slightly increased padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for focus effects */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    /* Highlight border on focus */
+    outline: none;
+    /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Add subtle glow effect */
+}
+
+
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .section-title {
+        font-size: 24px;
+        /* Slightly smaller font size for mobile */
+    }
+}
+
+.about-section {
+    padding: 40px 20px; /* Padding for breathing space */
+    background-color: #ffffff; /* Use white for a cleaner look */
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Increased shadow for more depth */
+    width: 100%; /* Make section take full width */
+    margin: 0; /* Remove centering to allow full width */
+    position: relative; /* Position for absolute elements */
+    overflow: hidden; /* Contain absolute children */
+}
+
+.about-section::before {
+    content: ''; /* Decorative element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%; /* Cover entire section */
+    background: linear-gradient(135deg, rgba(235, 235, 235, 0.5), rgba(255, 255, 255, 0.5)); /* Subtle gradient overlay */
+    z-index: 0; /* Position behind content */
+}
+
+.section-title {
+    font-size: 2.5rem; /* Larger title for emphasis */
+    font-weight: bold; /* Bold for importance */
+    color: #2c3e50; /* Darker color for contrast */
+    text-align: center; /* Centered title */
+    margin-bottom: 30px; /* Space below title */
+    position: relative; /* For positioning effects */
+}
+
+.section-title::after {
+    content: ''; /* Decorative line under the title */
+    display: block;
+    width: 50px; /* Fixed width */
+    height: 4px; /* Height of the line */
+    background: #e74c3c; /* Accent color */
+    margin: 10px auto; /* Centered under the title */
+    border-radius: 5px; /* Rounded ends */
+}
+
+.about-content {
+    line-height: 1.6; /* Increased line height for better readability */
+    font-size: 1.15rem; /* Slightly larger font size for body text */
+    color: #34495e; /* Darker text for better contrast */
+    margin: 0; /* Reset margin */
+    z-index: 1; /* Position above gradient */
+    position: relative; /* For layering */
+}
+
+.about-content p {
+    margin-bottom: 20px; /* Spacing between paragraphs */
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+.about-content p:hover {
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+.animate__animated {
+    animation-duration: 1s; /* Duration of animation */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 600px) {
+    .about-section {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    .section-title {
+        font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+
+    .about-content {
+        font-size: 1rem; /* Smaller font size on smaller screens */
+        line-height: 1.5; /* Adjust line height for smaller screens */
+    }
+}
+
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the items */
+    width: 100%; /* Full width */
+    margin: 0; /* Remove margin to allow full width */
+    padding: 20px; /* Optional: add padding for breathing space */
+}
+
+.skill-card {
+    width: 300px; /* Fixed width for uniformity */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skill-icon {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center vertically */
+    height: 150px; /* Set a fixed height for the icon area */
+}
+
+.skill-image {
+    width: 100%; /* Fixed width */
+    height: 100px; /* Fixed height to maintain size */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.skill-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.skill-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* LinkedIn Section */
+.linkedin-section {
+    padding: 60px 20px; /* Increased padding for breathing space and full width */
+    background-color: #f0f0f0; /* Softer background color */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensures clean layout */
+    width: 100%; /* Full width */
+    margin: 0; /* Remove margin to allow full width */
+}
+
+.linkedin-section::before {
+    content: ''; /* Decorative background element */
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 119, 181, 0.1); /* Light LinkedIn-themed circle */
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.linkedin-section::after {
+    content: ''; /* Decorative background element */
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 119, 181, 0.1); /* Another LinkedIn-themed circle */
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.section-title {
+    font-size: 2.8rem; /* Larger title */
+    margin-bottom: 25px; /* Increased space below title */
+    color: #2c3e50; /* Darker, more modern color */
+    position: relative; /* For z-index layering */
+    z-index: 1; /* Ensure text stays above background effects */
+}
+
+.linkedin-content {
+    max-width: 650px; /* Increased max-width for better spacing */
+    margin: 0 auto; /* Center content */
+    font-size: 1.15rem; /* Slightly smaller, cleaner font */
+    line-height: 1.6; /* Increased readability */
+    color: #555; /* Neutral color for the paragraph text */
+    position: relative; /* For z-index layering */
+    z-index: 1; /* Ensure text stays above background effects */
+}
+
+.linkedin-btn {
+    display: inline-block;
+    padding: 12px 30px; /* Increased padding for a larger, more clickable button */
+    background-color: #0077b5; /* LinkedIn blue */
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold; /* Bold font for emphasis */
+    border-radius: 30px; /* Full-rounded button for modern look */
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3); /* Subtle shadow for depth */
+    margin-top: 20px; /* Space between paragraph and button */
+}
+
+.linkedin-btn:hover {
+    background-color: #005582; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 119, 181, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 2.2rem; /* Adjust title size for smaller screens */
+    }
+
+    .linkedin-content {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+
+    .linkedin-btn {
+        padding: 10px 20px; /* Adjust button padding for smaller screens */
+        font-size: 1.1rem; /* Slightly smaller button text */
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #4f5257; /* Base dark background */
+    background-image: radial-gradient(circle at 20% 20%, rgba(172, 208, 35, 0.4) 2px, transparent 20%), 
+                      radial-gradient(circle at 80% 50%, rgba(172, 208, 35, 0.4) 3px, transparent 20%);
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Brush strokes */
+.brush-overlay {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgba(172, 208, 35, 0.1);
+    filter: blur(30px);
+    transform: rotate(-45deg);
+}
+
+.brush-overlay2 {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    width: 300px;
+    height: 150px;
+    background: rgba(172, 208, 35, 0.1);
+    filter: blur(40px);
+    transform: rotate(15deg);
+}
